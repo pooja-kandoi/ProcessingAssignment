@@ -12,7 +12,7 @@ public class Processing_Assignment_Procedural extends PApplet {
 
     }
 
-    int[][] circle = new int[NumberOfBalls][2];
+    int[][] Balls = new int[NumberOfBalls][2];
 
     @Override
     public void settings() {
@@ -24,16 +24,16 @@ public class Processing_Assignment_Procedural extends PApplet {
     @Override
     public void setup() {
         for (int i = 0; i < NumberOfBalls; i++) {
-            circle[i][0] = 0;
-            circle[i][1] = i + 1;
+            Balls[i][0] = 0;
+            Balls[i][1] = i + 1;
         }
     }
 
     @Override
     public void draw() {
-        for (int i = 0; i < circle.length; i++) {
-            drawcircle(circle[i]);
-            circle[i][0] += circle[i][1];
+        for (int ball_id = 0; ball_id < Balls.length; ball_id++) {
+            drawcircle(Balls[ball_id]);
+            Balls[ball_id][0] += Balls[ball_id][1];
         }
     }
 

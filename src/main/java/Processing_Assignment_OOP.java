@@ -5,18 +5,8 @@ public class Processing_Assignment_OOP extends PApplet {
     public static final int WIDTH = 640;
     public static final int HEIGHT = 480;
     public static final int DIAMETER = 10;
+    public static final int numberOfBalls = 4;
 
-    public static class MovingBall {
-        int xAxis;
-        int yAxis;
-        int speed;
-
-        public MovingBall(int x, int y, int speed) {
-            this.xAxis = x;
-            this.yAxis = y;
-            this.speed = speed;
-        }
-    }
 
     MovingBall[] Balls;
 
@@ -32,9 +22,9 @@ public class Processing_Assignment_OOP extends PApplet {
 
     @Override
     public void setup() {
-        Balls = new MovingBall[4];
-        for (int i = 0; i < 4; i++) {
-            Balls[i] = new MovingBall(0, (HEIGHT * (i + 1)) / 5, i + 1);
+        Balls = new MovingBall[numberOfBalls];
+        for (int ball_id = 0; ball_id < numberOfBalls; ball_id++) {
+            Balls[ball_id] = new MovingBall(0, (HEIGHT * (ball_id + 1)) / 5, ball_id+ 1);
         }
     }
 
@@ -42,7 +32,7 @@ public class Processing_Assignment_OOP extends PApplet {
     public void draw() {
         for (MovingBall ball : Balls) {
             drawCircle(ball);
-            ball.xAxis += ball.speed;
+            ball.moveBall();
         }
     }
 
