@@ -32,15 +32,15 @@ public class Processing_Assignment_Procedural extends PApplet {
     @Override
     public void draw() {
         for (int ball_id = 0; ball_id < Balls.length; ball_id++) {
-            drawcircle(Balls[ball_id]);
+            drawCircle(Balls[ball_id]);
             Balls[ball_id][0] += Balls[ball_id][1];
         }
     }
 
-    private void drawcircle(int[] circle) {
+    private void drawCircle(int[] Ball) {
 
-        ellipse(circle[0],
-                (HEIGHT * circle[1]) / 5,
+        ellipse(Ball[0],
+                (HEIGHT * Ball[1]) / 5,
                 DIAMETER,
                 DIAMETER);
     }

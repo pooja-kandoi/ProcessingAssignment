@@ -24,7 +24,7 @@ public class Processing_Assignment_OOP extends PApplet {
     public void setup() {
         Balls = new MovingBall[numberOfBalls];
         for (int ball_id = 0; ball_id < numberOfBalls; ball_id++) {
-            Balls[ball_id] = new MovingBall(0, (HEIGHT * (ball_id + 1)) / 5, ball_id+ 1);
+            Balls[ball_id] = new MovingBall(0, (HEIGHT * (ball_id + 1)) / (numberOfBalls + 1), ball_id + 1);
         }
     }
 

@@ -1,7 +1,7 @@
 public class MovingBall {
     int xAxis;
-    int yAxis;
-    int speed;
+    final int yAxis;
+    final int speed;
 
     public MovingBall(int x, int y, int speed) {
         this.xAxis = x;
