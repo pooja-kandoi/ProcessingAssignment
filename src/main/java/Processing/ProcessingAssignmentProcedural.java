@@ -1,14 +1,16 @@
+package Processing;
+
 import processing.core.PApplet;
 
-public class Processing_Assignment_Procedural extends PApplet {
-    public static final int WIDTH = 640;
-    public static final int HEIGHT = 480;
-    public static final int DIAMETER = 10;
-    public static final int NumberOfBalls = 4;
+public class ProcessingAssignmentProcedural extends PApplet {
+    static final int WIDTH = 640;
+    static final int HEIGHT = 480;
+    static final int DIAMETER = 10;
+    static final int NumberOfBalls = 4;
 
 
     public static void main(String[] args) {
-        PApplet.main("Processing_Assignment_Procedural", args);
+        PApplet.main("Processing.ProcessingAssignmentProcedural", args);
 
     }
 
@@ -31,16 +33,16 @@ public class Processing_Assignment_Procedural extends PApplet {
 
     @Override
     public void draw() {
-        for (int ball_id = 0; ball_id < Balls.length; ball_id++) {
-            drawCircle(Balls[ball_id]);
-            Balls[ball_id][0] += Balls[ball_id][1];
+        for (int ballId = 0; ballId < Balls.length; ballId++) {
+            drawCircle(Balls[ballId]);
+            Balls[ballId][0] += Balls[ballId][1];
         }
     }
 
     private void drawCircle(int[] Ball) {
 
         ellipse(Ball[0],
-                (HEIGHT * Ball[1]) / 5,
+                (HEIGHT * Ball[1]) / (NumberOfBalls + 1),
                 DIAMETER,
                 DIAMETER);
     }

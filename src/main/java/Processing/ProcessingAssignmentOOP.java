@@ -1,6 +1,8 @@
+package Processing;
+
 import processing.core.PApplet;
 
-public class Processing_Assignment_OOP extends PApplet {
+public class ProcessingAssignmentOOP extends PApplet {
 
     public static final int WIDTH = 640;
     public static final int HEIGHT = 480;
@@ -11,7 +13,7 @@ public class Processing_Assignment_OOP extends PApplet {
     MovingBall[] Balls;
 
     public static void main(String[] args) {
-        PApplet.main("Processing_Assignment_OOP", args);
+        PApplet.main("Processing.ProcessingAssignmentOOP", args);
     }
 
     @Override
@@ -23,8 +25,8 @@ public class Processing_Assignment_OOP extends PApplet {
     @Override
     public void setup() {
         Balls = new MovingBall[numberOfBalls];
-        for (int ball_id = 0; ball_id < numberOfBalls; ball_id++) {
-            Balls[ball_id] = new MovingBall(0, (HEIGHT * (ball_id + 1)) / (numberOfBalls + 1), ball_id + 1);
+        for (int ballId = 0; ballId < numberOfBalls; ballId++) {
+            Balls[ballId] = new MovingBall(0, (HEIGHT * (ballId + 1)) / (numberOfBalls + 1), ballId + 1);
         }
     }
 

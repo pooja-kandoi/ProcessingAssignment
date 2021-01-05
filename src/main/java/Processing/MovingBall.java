@@ -1,3 +1,5 @@
+package Processing;
+
 public class MovingBall {
     int xAxis;
     final int yAxis;

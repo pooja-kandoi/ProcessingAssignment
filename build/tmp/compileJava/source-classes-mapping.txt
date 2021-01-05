@@ -1,6 +1,6 @@
-Processing_Assignment_Procedural.java
- Processing_Assignment_Procedural
-MovingBall.java
- MovingBall
-Processing_Assignment_OOP.java
- Processing_Assignment_OOP
+Processing/MovingBall.java
+ Processing.MovingBall
+Processing/ProcessingAssignmentProcedural.java
+ Processing.ProcessingAssignmentProcedural
+Processing/ProcessingAssignmentOOP.java
+ Processing.ProcessingAssignmentOOP
